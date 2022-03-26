@@ -1,0 +1,27 @@
+<div class="content-div">
+  <h1>New task</h1>
+
+  <%= form_for @task do |f| %>
+    <div>
+      Enter name
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div>
+      Enter Details
+      <%= f.label :details %>
+      <%= f.text_field :details %>
+    </div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+
+</div>
+
+<div class="link-div">
+  <p> <i class="fa fa-refresh" aria-hidden="true"></i> <%= link_to "Back to list", tasks_path %></p>
+</div>
